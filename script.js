@@ -12,8 +12,9 @@ function computerPlay() {
 function playRound(playerSelection, computerSelection) {
     
     //sets player and computer selection to lower case except first letter
-    let player = playerSelection.charAt(0) + playerSelection.substring(1).toLowerCase();
-    let computer = computerSelection.charAt(0) + computerSelection.substring(1).toLowerCase();
+    let player = playerSelection.charAt(0).toUpperCase() + playerSelection.substring(1).toLowerCase();
+    console.log("You chose: " + player);
+    let computer = computerSelection.charAt(0).toUpperCase() + computerSelection.substring(1).toLowerCase();
 
     //if player choose rock
     if (player === "Rock"){
@@ -22,7 +23,7 @@ function playRound(playerSelection, computerSelection) {
         }else if (computer === "Scissors") {
             console.log("You win! Rock beats Scissors");
         }else if (computer === "Paper") {
-            console.log("The computer wins! Paper beats Rock");
+            console.log("You lose! Paper beats Rock");
         }
     }
 
@@ -33,7 +34,7 @@ function playRound(playerSelection, computerSelection) {
         }else if (computer === "Rock") {
             console.log("You win! Paper beats Rock");
         }else if (computer === "Scissors") {
-            console.log("The computer wins! Scissors beats Paper");
+            console.log("You lose! Scissors beats Paper");
         }
     }
 
@@ -44,16 +45,16 @@ function playRound(playerSelection, computerSelection) {
         }else if (computer === "Paper") {
             console.log("You win! Scissors beats Paper");
         }else if (computer === "Rock") {
-            console.log("The computer wins! Rock beats Scissors");
+            console.log("You lose! Rock beats Scissors");
         }
     }
 
 
 }
 
-const playerSelection = "Rock";
+const playerSelection = "roCk";
 const computerSelection = computerPlay();
-console.log('Computer chose: ' + computerSelection);
+console.log("Computer chose: " + computerSelection);
 console.log(playRound(playerSelection, computerSelection));
 
 function game() {
